@@ -1131,7 +1131,7 @@ section {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: 1;
-    color: var(--primary-black);
+    color: var(--primary-white);
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
     font-size: 2rem;
 }
@@ -1491,6 +1491,7 @@ section {
 .feature-item-icon {
     font-size: 2.5rem;
     flex-shrink: 0;
+    color: var(--primary-white);
 }
 
 .feature-item-content h3 {
@@ -1551,6 +1552,7 @@ section {
 .contact-detail-icon {
     font-size: 2rem;
     flex-shrink: 0;
+    color: var(--primary-white);
 }
 
 .contact-detail-content h3 {
