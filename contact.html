@@ -217,6 +217,38 @@
         </div>
     </footer>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        /*
+            EMAILJS CONFIG
+            Replace the placeholder strings below with the IDs from your EmailJS account.
+            - user_id: EmailJS User ID (find in EmailJS dashboard -> Integration / Account)
+            - service_id: the Service you created (e.g. service_xxx)
+            - template_id: the Template you created (e.g. template_xxx)
+
+            If you paste the real IDs here I can commit them for you.
+        */
+        window.EMAILJS_CONFIG = {
+            user_id: '5eTowYrH6Iw4PTVON',        // public key (from your account screenshot)
+            service_id: 'service_yp2e4pf',  // provided service ID
+            template_id: 'template_ac7z4qx' // provided template ID
+        };
+
+        // Initialize EmailJS automatically if a real user_id is present
+        (function initEmailJS() {
+            try {
+                if (window.EMAILJS_CONFIG && window.EMAILJS_CONFIG.user_id && window.emailjs) {
+                    emailjs.init(window.EMAILJS_CONFIG.user_id);
+                    console.log('EmailJS initialized');
+                } else {
+                    // no-op; will fall back to server-side path if EmailJS not configured
+                    console.log('EmailJS not initialized (missing IDs or SDK)');
+                }
+            } catch (e) {
+                console.warn('EmailJS init error', e);
+            }
+        })();
+    </script>
     <script src="script.js"></script>
 </body>
 
